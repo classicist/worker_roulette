@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = WorkerRoulette::VERSION
   spec.authors       = ['Paul Saieg']
   spec.email         = ['classicist@gmail.com']
-  spec.description   = %q{Pub Sub Queue for Redis that ensures ordered processing}
-  spec.summary       = %q{Pub Sub Queue for Redis that ensures ordered processing}
+  spec.description   = %q{High performance queueing system for Redis that ensures each publishers messages will be processed in order. Designed to work with 100s of thousands of publishers and an arbitrary number of competing consumers that need 0 knoweldge of what producer's message they are handling.}
+  spec.summary       = %q{High performance queueing system for Redis that ensures each publishers messages will be processed in order.}
   spec.homepage      = 'https://github.com/classicist/worker_roulette'
 
   spec.files         = `git ls-files`.split($/)
