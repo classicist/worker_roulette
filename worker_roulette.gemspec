@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'worker_roulette/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'nexia_worker_roulette'
+  spec.name          = 'worker_roulette'
   spec.version       = WorkerRoulette::VERSION
   spec.authors       = ['Paul Saieg']
   spec.email         = ['classicist@gmail.com']
   spec.description   = %q{Pub Sub Queue for Redis that ensures ordered processing}
   spec.summary       = %q{Pub Sub Queue for Redis that ensures ordered processing}
-  spec.homepage      = 'https://github.com/nexiahome/worker_roulette'
+  spec.homepage      = 'https://github.com/classicist/worker_roulette'
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
