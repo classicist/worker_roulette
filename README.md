@@ -86,7 +86,7 @@ Running the performance tests on my laptop, the numbers break down like this:
   - Polling: ~10,000 read-write round-trips / second
   - Manual:  ~5,500  read-write round-trips / second
 
-To run the perf tests yourself run `bundle exec spec:perf`
+To run the perf tests yourself run `bundle exec rake spec:perf`
 
 ## Redis Version
 WorkerRoulette uses Redis' lua scripting feature to acheive such high throughput and therefore requires a version of Redis that supports lua scripting (>= Redis 2.6)
