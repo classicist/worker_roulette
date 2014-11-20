@@ -4,12 +4,14 @@ WorkerRoulette is designed to allow large numbers of unique devices, processes, 
 
 WorkerRoulette was created to solve two otherwise hard problems:
 
-1) Other messaging solutions (I'm looking at you RabbitMQ) are not designed to  handle very large numbers of queues (millions); because WorkerRoulette is built on top of Redis, we have successfully tested it running with millions of queues. 
+1) Other messaging solutions (I'm looking at you RabbitMQ) are not designed to  handle very large numbers of queues (millions). Because WorkerRoulette is built on top of Redis, we have successfully tested it running (fast) with millions of queues. 
 
 2) Other messaging systems assume one (or more) of three things: 
-            1. Your message consumers know the routing key of messages they are interested in processing; 
-            2. Your messages can wait so that only one consumer is processed at a time; 
-            3. You love to write complicated code to put your messages back in order.
+
+1. Your message consumers know the routing key of messages they are interested in processing
+2. Your messages can wait so that only one consumer is processed at a time
+3. You love to write complicated code to put your messages back in order.
+
 Sometimes, none of these things is true and that is where WorkerRoulette comes in.
 
 WorkerRoulette lets you have thousands of competing consumers (distributed over as many machines as you'd like) processing ordered messages from millions of totally unknown message providers. It does all this and ensures that the messages sent from each message provider are processed in exactly the order it sent them.
